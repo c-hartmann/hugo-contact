@@ -1,0 +1,245 @@
+<head>
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Kontaktformular - Elke Thiel</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/fonts.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+
+    <style>
+
+      form {
+		margin-top: 		5em;
+        width: 				98%;
+        background: 		#ebdef0;
+        border-radius: 		4px;
+        padding-top: 		1em;
+        padding-bottom: 	1em;
+      }
+
+      fieldset {
+        width: 				100%;
+        border: 			medium none !important;
+      }
+
+      input {
+        border: 			medium none !important;
+        padding:			10px;
+      }
+
+      label {
+        display: inline-block;
+        text-align: left;
+        padding-right: 10px;
+      }
+
+      textarea {
+        width : 			100%;
+        box-sizing: 		border-box;
+        border: 			medium none !important;
+        padding: 			10px;
+        box-sizing: 		border-box;
+      }
+
+	  input {
+		margin-bottom: 		1em;
+	  }
+
+	  input[type='checkbox'] {
+		width:  			2em;
+		height: 			2em;
+	  }
+
+      button {
+		margin-top:			1em;
+		background: 		Purple;
+		color:				White;
+        border-radius: 		4px;
+		width:  			100%;
+		height: 			3em;
+	  }
+
+    </style>
+  </head>
+
+  <body>
+
+  <header class="masthead">
+      <h1><a href="../">Elke Thiel</a></h1>
+
+<p class="tagline">Heilpraktikerin für Psychotherapie,<br>TraumaTherapeutin,<br>Kompetenzpartnerin Hochsensibilität,<br>EMDR-Therapeutin,<br>TOMATIS®-Practitioner</p>
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" hidden/>
+  <label id="menu-label" for="menu-check" class="unselectable" hidden>
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+
+
+  <li><a href="../">Start</a></li>
+  
+  <li><a href="../traumaarbeit">TraumaARBEIT</a></li>
+  
+  <li><a href="../emdr">EMDR-Therapie</a></li>
+  
+  <li><a href="../tomatis">TOMATIS®-Hörtraining</a></li>
+  
+  <li><a href="../coaching">Coaching und Hochsensibilität</a></li>
+  
+  <li><a href="../trauerbegleitung">Trauerbegleitung</a></li>
+  
+  <li><a href="../kompetenzen">Kompetenzen</a></li>
+  
+  <li><a href="../honorar">Honorar</a></li>
+  
+  <li><a href="../anfahrt">Anfahrt</a></li>
+  
+  <li><a href="../kontakt">Kontakt</a></li>
+  
+  <li><a href="../impressum">Impressum</a></li>
+  
+  <li><a href="../links">Links</a></li>
+
+
+  </ul>
+</nav>
+
+</header>
+
+	<article class="main">
+	
+	<section>
+
+		<h2>Kontakt</h2>
+
+		<div>
+		Liebe Besucherin, lieber Besucher,
+		</div>
+		
+		<div>
+		<p>Sie erreichen mich am schnellsten direkt<br>über meine E-Mailadresse <a href="mailto:kontakt@elkethiel-berlin.de">kontakt@elkethiel-berlin.de</a><br>oder telefonisch unter 030 33 85 22 19.</p>
+		<p>Oder Sie nutzen das nachfolgende Kontaktformular ...</p>
+		</div>
+
+		<div>
+		<em>Bitte geben sie Ihre E-Mail Anschrift und gerne auch Ihre Telefonnummer an.</em>
+		</div>
+
+		<div>
+		<em>(erforderliche Felder sind mit einem <strong><span aria-label="required">*</span></strong> gekennzeichnet).</em>
+		</div>
+
+		<div>
+
+		<form id="contact_form" action="http://hugo.elkethiel-berlin.de/404/" method="get"><!-- 'get' should missguide spammers -->
+
+			<fieldset>
+<!-- 				<legend>Ihre Kontaktdaten</legend> -->
+				<div>
+					<label for="email">Ihre E-Mail Adresse: <span aria-label="required">*</span></label>
+				</div>
+				<div>
+					<input
+						type="email"
+						id="email"
+						name="contact_eml"
+						placeholder="me@from.me"
+						required
+						pattern="^[a-zA-Z][.a-zA-Z0-9\-_]*@[a-z0-9\-\.]+\.{1}[a-zA-Z]{2,9}$"
+						minlength="6"
+					/>
+				</div>
+				<div>
+					<label for="phone">Ihre Telefonnummer:</label>
+				</div>
+				<div>
+					<!-- TODO: do we realy need a pattern? or is type=tel good enough?  -->
+					<!-- NOTE: the pattern utilized here matches german phone number syntax -->
+					<input
+						type="tel"
+						id="phone"
+						name="contact_tel"
+						placeholder="030..."
+						pattern="^[+0]{1,2}[1-9]{1}[0-9\ \-]+[0-9 ]+$"
+						title="Es sind nur Zahlen 1 bis 9, das +, das - Zeichen und Leerzeichen erlaubt"
+					/>
+				</div>
+			</fieldset>
+
+			<fieldset>
+<!-- 				<legend>Ihre Nachricht an mich (max. 80 Zeichen)</legend> -->
+				<div>
+					<label for="message">Ihre Nachricht an mich (max. 200 Zeichen): <span aria-label="required">*</span></label>
+				</div>
+				<div>
+					<textarea
+						id="message"
+						name="contact_msg"
+						rows="4"
+						placeholder="Hallo Frau Thiel, ..."
+						required
+						minlength="10"
+						maxlength="200"
+					></textarea>
+				</div>
+			</fieldset>
+
+			<fieldset>
+<!-- 				<legend>Nachricht Versenden</legend> -->
+				<div>
+					<label for="cnf">Ich bin mit der Verarbeitung meiner Eingaben zum Zwecke der Anfragebearbeitung einverstanden. <span aria-label="required">*</span></label>
+				</div>
+				<div>
+					<input
+						type="checkbox"
+						id="confirmation"
+						name="contact_cnf"
+						required
+						oninvalid="setCustomValidity('Bitte bestätigen Sie Ihr Einverständnis')"
+						oninput="setCustomValidity('')"
+					/>
+				</div>
+				<div>
+					<label for="cap">Bitte geben Sie das Ergebnis dieser kleinen Rechenaufgabe ein. 1+1= ...<span aria-label="required">*</span></label>
+				</div>
+				<div>
+					<!-- NOTE: the pattern attribute is not allowed for type number, but text (and some other) -->
+					<!-- NOTE: the pattern used herein is way to complex, but the way it is to confuse spam attackers -->
+					<input
+						type="text"
+						id="captcha"
+						name="contact_cap"
+						required
+						pattern="^[2]{1}$"
+						oninvalid="setCustomValidity('Bitte geben Sie die richtige Antwort auf die Sicherheitsfrage ein')"
+						oninput="setCustomValidity('')"
+					/>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<div>
+					<button type="submit" id="sub" name="contact_sub" formaction="http://hugo.elkethiel-berlin.de/kontakt/send-mail.php" formmethod="post">Abschicken</button>
+				</div>
+			</fieldset>
+
+		</form>
+		</div>
+
+		<div>
+		<p>Elke Thiel</p>
+		<p>Schallweg 38a (rotes Tor)<br>
+		14089 Berlin</p>
+		</div>
+
+	</section>
+	</article>
+
+  </body>
+</html>
