@@ -32,7 +32,7 @@ $sm_config = [
 	'smtp' => [
 		'host' => 'mailhost.out',
 		'port' =>  465, // 25, 465
-		'user' => 'noreply@foobar.de', // noreply@elkethiel-berlin.de, elke.thiel@gmx.net
+		'user' => 'noreply@foobar.de',
 		'pass' => 'SUOPER-SECRET-PASS'
 	],
 
